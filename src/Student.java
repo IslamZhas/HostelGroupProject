@@ -1,4 +1,4 @@
-public class Student extends Person {
+public class Student extends Person  {
     private int rollNumber;
     private int roomNumber;
     public Student(String adam_adam, String s) {
