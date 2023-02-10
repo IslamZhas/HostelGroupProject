@@ -10,9 +10,9 @@ public class Main {
             Class.forName("org.postgresql.Driver");
             con = DriverManager.getConnection(connectionUrl, "postgres", "Aa1234");
             statement = con.createStatement();
-            rs = statement.executeQuery("select * from Student");
+            rs = statement.executeQuery("select * from users");
             while(rs.next()){
-                System.out.println(rs.getInt("id"));
+                System.out.println(rs.getInt("id") + " " + rs.getString("name") + " " + rs.getInt("age") + " " + rs.getString("address"));
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
