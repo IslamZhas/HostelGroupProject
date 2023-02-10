@@ -2,7 +2,7 @@ public class Person {
     private String name;
     private int age;
     private String address;
-    public Person() {
+    public Person(String adam_adam, String s) {
     }
 
     public String getName() {
