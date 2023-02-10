@@ -1,4 +1,4 @@
-public class Room {
+public class Room  {
     private int roomNumber;
     private String type;
     private int numberOfBeds;
