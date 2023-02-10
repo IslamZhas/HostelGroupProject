@@ -1,4 +1,4 @@
-public class Hostel {
+public class Hostel  {
     private String name;
     private String location;
     private int totalRooms;
