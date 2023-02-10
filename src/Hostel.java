@@ -2,21 +2,28 @@ public class Hostel {
     private String name;
     private String location;
     private int totalRooms;
+
     public String getName() {
-        return name;    }
+        return name;
+    }
 
     public void setName(String name) {
-        this.name = name;    }
+        this.name = name;
+    }
 
     public String getLocation() {
-        return location;    }
+        return location;
+    }
 
     public void setLocation(String location) {
-        this.location = location;    }
+        this.location = location;
+    }
 
     public int getTotalRooms() {
-        return totalRooms;    }
+        return totalRooms;
+    }
 
     public void setTotalRooms(int totalRooms) {
-        this.totalRooms = totalRooms;    }
+        this.totalRooms = totalRooms;
+    }
 }
