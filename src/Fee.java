@@ -1,4 +1,4 @@
-public class Fee {
+public class Fee  {
     private int monthlyFee;
     private int lateFee;
     public Fee(int monthlyFee, int lateFee) {
