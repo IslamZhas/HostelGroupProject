@@ -8,6 +8,9 @@ public class Payment {
     private String mode;
     private String date;
     private int total;
+    public Payment(){
+        super();
+    }
     public Payment(int payment_id, int amount, String mode, String date, int total) {
         this.payment_id = payment_id;
         this.amount = amount;
