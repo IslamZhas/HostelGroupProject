@@ -1,7 +1,16 @@
 public class Room {
+    private int id;
     private int roomNumber;
     private String type;
     private int numberOfBeds;
+
+    public Room(int id, int roomNumber, int numberOfBeds, String type) {
+        this.id = id;
+        this.roomNumber = roomNumber;
+        this.numberOfBeds = numberOfBeds;
+        this.type = type;
+    }
+
     public int getRoomNumber() {
         return roomNumber;
     }
