@@ -3,12 +3,12 @@ package entity;
 public class Room {
     private int id;
     private int roomNumber;
-    private String type;
+    private String name;
     private int numberOfBeds;
     public Room(int roomNumber, int numberOfBeds, String type) {
         this.roomNumber = roomNumber;
         this.numberOfBeds = numberOfBeds;
-        this.type = type;
+        this.name = name;
     }
     public Room(int id, int roomNumber, int numberOfBeds, String type) {
         this(roomNumber, numberOfBeds, type);
@@ -21,10 +21,10 @@ public class Room {
         this.roomNumber = roomNumber;    }
 
     public String getType() {
-        return type;    }
+        return name;    }
 
     public void setType(String type) {
-        this.type = type;    }
+        this.name = type;    }
     public int getNumberOfBeds() {
         return numberOfBeds;    }
 
@@ -35,7 +35,7 @@ public class Room {
     public String toString() {
         return "Room{" +
                 "id = " + id +
-                ", type = " + type +
+                ", name = " + name +
                 ", room number " + roomNumber +
                 ", number of beds " + numberOfBeds +
                 "}";

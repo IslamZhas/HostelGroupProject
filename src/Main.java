@@ -1,18 +1,22 @@
+import controllers.RoomController;
+import controllers.UserController;
+import data.IDB;
+import data.PostgresDataBase;
+import repositories.RoomRepository;
+import repositories.UserRepository;
+import repositories.UsersRepository;
+
 import java.sql.*;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
-        Hostel hostel = new Hostel();
-        Payment payment = new Payment();
-        boolean run = true;
-        Scanner scanner = new Scanner(System.in);
-        while(run){
-            System.out.printf("Hello, Welcome to our Hostel");
-            System.out.println("Choose the options to make a banking");
-            System.out.println("1)I want to bank room");
-            System.out.println("2)I want to delete place from the banking");
-            System.out.println("3)I want to cancel the banking");
-        }
+        IDB db = new PostgresDataBase();
+        UsersRepository repo = new UserRepository(db);
+        UserController userController = new UserController(repo);
+        RoomRepository roomRepo = new RoomRepository(db);
+        RoomController roomController = new RoomController(roomRepo);
+        HostelApplication app = new HostelApplication(userController, roomController);
+        app.start();
     }
 }
