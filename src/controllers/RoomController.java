@@ -7,8 +7,6 @@ import java.util.List;
 
 public class RoomController {
     private final RoomsRepository roomsRepository;
-
-}
 public RoomController(RoomsRepository roomsRepository){
         this.roomsRepository = roomsRepository;
     }
@@ -21,3 +19,5 @@ public RoomController(RoomsRepository roomsRepository){
 
         return (room == null ? "Room with that id was not found" : room.toString());
     }
+
+}
