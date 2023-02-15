@@ -17,6 +17,7 @@ public class Main {
         RoomRepository roomRepo = new RoomRepository(db);
         RoomController roomController = new RoomController(roomRepo);
         HostelApplication app = new HostelApplication(userController, roomController);
+        //1app.createUserMenu();
         app.start();
     }
 }

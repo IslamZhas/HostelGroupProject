@@ -5,40 +5,72 @@ public class Room {
     private int roomNumber;
     private String name;
     private int numberOfBeds;
-    public Room(int roomNumber, int numberOfBeds, String type) {
+    private int cost;
+    private boolean booked;
+    public Room(String name, int roomNumber, int numberOfBeds, int cost, boolean booked) {
         this.roomNumber = roomNumber;
         this.numberOfBeds = numberOfBeds;
         this.name = name;
+        this.cost = cost;
+        this.booked = booked;
     }
-    public Room(int id, int roomNumber, int numberOfBeds, String type) {
-        this(roomNumber, numberOfBeds, type);
+    public Room(int id,String name, int roomNumber, int numberOfBeds, int cost, boolean booked) {
+        this(name, roomNumber, numberOfBeds, cost, booked);
         this.id = id;
     }
     public int getRoomNumber() {
             return roomNumber;
         }
+
+    public boolean isBooked() {
+        return booked;
+    }
+
+    public void setBooked(boolean booked) {
+        this.booked = booked;
+    }
+
     public void setRoomNumber(int roomNumber) {
         this.roomNumber = roomNumber;    }
 
-    public String getType() {
-        return name;    }
+    public String getName() {
+        return name;
+    }
 
-    public void setType(String type) {
-        this.name = type;    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public int getNumberOfBeds() {
         return numberOfBeds;    }
+
+    public int getCost() {
+        return cost;
+    }
+
+    public void setCost(int cost) {
+        this.cost = cost;
+    }
 
     public void setNumberOfBeds(int numberOfBeds) {
         this.numberOfBeds = numberOfBeds;    }
 
     @Override
     public String toString() {
-        return "Room{" +
+        return "\n" + "Room: " +
                 "id = " + id +
                 ", name = " + name +
                 ", room number " + roomNumber +
                 ", number of beds " + numberOfBeds +
-                "}";
+                ", cost " + cost + ", booked = " + booked + "\n";
     }
 }
 

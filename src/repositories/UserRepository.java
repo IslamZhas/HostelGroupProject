@@ -3,9 +3,7 @@ package repositories;
 import data.IDB;
 import entity.User;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class UserRepository implements UsersRepository {
     private final IDB db;
@@ -18,12 +16,12 @@ public class UserRepository implements UsersRepository {
         Connection con = null;
         try {
             con = db.getConnection();
-            String sql = "INSERT INTO user(name,surname,balance) VALUES(?,?,?)";
+            String sql = "INSERT INTO users(name,surname,balance) VALUES(?,?,?)";
             PreparedStatement st = con.prepareStatement(sql);
 
             st.setString(1, user.getName());
             st.setString(2, user.getSurname());
-            st.setDouble(3, user.getBalance());
+            st.setInt(3, user.getBalance());
 
             st.execute();
             return true;
@@ -40,5 +38,6 @@ public class UserRepository implements UsersRepository {
         }
         return false;
     }
+
 }
 

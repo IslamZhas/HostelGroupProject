@@ -8,7 +8,7 @@ public class UserController {
     public UserController(UsersRepository repo){
         this.repo = repo;
     }
-    public String createUser(String name, String surname, double balance){
+    public String createUser(String name, String surname, int balance){
         User user = new User(name, surname, balance);
         boolean created = repo.createUser(user);
         return (created ? "User was created" : "User creation failed");

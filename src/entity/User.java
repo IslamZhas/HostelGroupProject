@@ -5,22 +5,23 @@ public class User {
     private String name;
     private String surname;
     private int balance;
-    public User(int balance){
+
+    public User(){}
+    public User(String name, String surname, int balance) {
+        setName(name);
+        setSurname(surname);
         setBalance(balance);
     }
-
+    public User(int id, String name, String surname, int balance) {
+        this(name, surname, balance);
+        setId(id);
+    }
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public User(String name, String surname, int balance) {
-        setName(name);
-        setSurname(surname);
-        setBalance(balance);
     }
 
     public void setName(String name) {
@@ -46,7 +47,7 @@ public class User {
 
 
 
-    public double getBalance() {
+    public int getBalance() {
         return balance;
     }
 
