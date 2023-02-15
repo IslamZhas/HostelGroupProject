@@ -1,13 +1,23 @@
 package entity;
 
 public class User {
+    private int id;
     private String name;
     private String surname;
-    private double balance;
-    public User(double balance){
+    private int balance;
+    public User(int balance){
         setBalance(balance);
     }
-    public User(String name, String surname, double balance) {
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public User(String name, String surname, int balance) {
         setName(name);
         setSurname(surname);
         setBalance(balance);
@@ -30,15 +40,11 @@ public class User {
     }
 
 
-    public void setBalance(double balance) {
+    public void setBalance(int balance) {
         this.balance = balance;
     }
-    public void pay (double price) {
-        this.balance = balance-price;
-    }
-    public void refund (double price) {
-        this.balance = balance+price;
-    }
+
+
 
     public double getBalance() {
         return balance;
