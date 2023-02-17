@@ -50,7 +50,8 @@ public class Room {
     }
 
     public int getNumberOfBeds() {
-        return numberOfBeds;    }
+        return numberOfBeds;    
+    }
 
     public int getCost() {
         return cost;
@@ -61,7 +62,8 @@ public class Room {
     }
 
     public void setNumberOfBeds(int numberOfBeds) {
-        this.numberOfBeds = numberOfBeds;    }
+        this.numberOfBeds = numberOfBeds;    
+    }
 
     @Override
     public String toString() {
