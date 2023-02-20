@@ -5,7 +5,8 @@ import repositories.UsersRepository;
 
 public class UserController {
     private final UsersRepository repo;
-    public UserController(UsersRepository repo){
+    public UserController(UsersRepository repo)
+    {
         this.repo = repo;
     }
     public String createUser(String name, String surname, int balance){
