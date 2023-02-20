@@ -51,6 +51,10 @@ public class User {
         return balance;
     }
 
+    public void paying(int cost){
+        this.balance = balance - cost;
+    }
+
     @Override
     public String toString() {
         return "User{" +

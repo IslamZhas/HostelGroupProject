@@ -7,17 +7,26 @@ public class Room {
     private int numberOfBeds;
     private int cost;
     private boolean booked;
-    public Room(String name, int roomNumber, int numberOfBeds, int cost, boolean booked) {
+    private int availablebeds;
+
+
+    public Room(String name, int roomNumber, int numberOfBeds, int cost, boolean booked, int availablebeds) {
         this.roomNumber = roomNumber;
         this.numberOfBeds = numberOfBeds;
         this.name = name;
         this.cost = cost;
         this.booked = booked;
+        this.availablebeds = availablebeds;
     }
-    public Room(int id,String name, int roomNumber, int numberOfBeds, int cost, boolean booked) {
-        this(name, roomNumber, numberOfBeds, cost, booked);
+    public Room(int id,String name, int roomNumber, int numberOfBeds, int cost, boolean booked, int availablebeds) {
+        this(name, roomNumber, numberOfBeds, cost, booked, availablebeds);
         this.id = id;
     }
+
+    public Room() {
+
+    }
+
     public int getRoomNumber() {
             return roomNumber;
         }
@@ -44,7 +53,13 @@ public class Room {
     public int getId() {
         return id;
     }
+    public int getAvailablebeds() {
+        return availablebeds;
+    }
 
+    public void setAvailablebeds(int availablebeds) {
+        this.availablebeds = availablebeds;
+    }
     public void setId(int id) {
         this.id = id;
     }
@@ -69,8 +84,8 @@ public class Room {
                 "id = " + id +
                 ", name = " + name +
                 ", room number " + roomNumber +
-                ", number of beds " + numberOfBeds +
-                ", cost " + cost + ", booked = " + booked + "\n";
+                ", number of beds " + numberOfBeds +  ", booked " + booked +
+                ", number of available beds " + availablebeds +"\n";
     }
 }
 

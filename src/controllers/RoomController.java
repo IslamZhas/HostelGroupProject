@@ -7,17 +7,27 @@ import java.util.List;
 
 public class RoomController {
     private final RoomsRepository roomsRepository;
-public RoomController(RoomsRepository roomsRepository){
+    public RoomController(RoomsRepository roomsRepository){
         this.roomsRepository = roomsRepository;
     }
     public String getAllRooms(){
         List<Room> rooms =roomsRepository.getAllRooms();
         return rooms.toString();
     }
-    public String getRoom(int id){
-        Room room = roomsRepository.getRoom(id);
-
-        return (room == null ? "Room with that id was not found" : room.toString());
+    public Room getRoom(int id){
+        List<Room> rooms1 = roomsRepository.getAllAvailableRooms();
+        Room regRoom = new Room();
+        for (Room room1 : rooms1) {
+            if (room1.getId()==id){
+                regRoom = room1;
+                break;
+            }
+        }
+        return regRoom;
     }
-
+    public String getAvailableRooms(){
+        List<Room> rooms1 = roomsRepository.getAllAvailableRooms();
+        return rooms1.toString();
+    }
 }
+

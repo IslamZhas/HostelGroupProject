@@ -1,3 +1,4 @@
+import controllers.CreateBookingController;
 import controllers.RoomController;
 import controllers.UserController;
 import data.IDB;
@@ -16,8 +17,9 @@ public class Main {
         UserController userController = new UserController(repo);
         RoomRepository roomRepo = new RoomRepository(db);
         RoomController roomController = new RoomController(roomRepo);
-        HostelApplication app = new HostelApplication(userController, roomController);
-        //1app.createUserMenu();
+        CreateBookingController createBookingController = new CreateBookingController(db);
+        HostelApplication app = new HostelApplication(userController, roomController, createBookingController);
+        //app.createUserMenu();
         app.start();
     }
 }
