@@ -27,7 +27,8 @@ public class Room {
 
     }
 
-    public int getRoomNumber() {
+    public int getRoomNumber() 
+    {
             return roomNumber;
         }
 
