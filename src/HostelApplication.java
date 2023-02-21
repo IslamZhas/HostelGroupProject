@@ -48,6 +48,23 @@ public class HostelApplication {
                         System.out.println("Rooms menu are provided: ");
                         System.out.println(response);
                         break;
+                        case 2:
+                        String response2 = roomController.getAvailableRooms();
+                        System.out.println("All available rooms are provided: ");
+                        System.out.println(response2);
+                        break;
+                    case 3:
+                        String response3 = roomController.getAvailableRooms();
+                        System.out.println(response3);
+                        System.out.println("Please enter id of the room by choosing one from list: ");
+                        int registerById = scanner.nextInt();
+                        Room registerBooking = roomController.getRoom(registerById);
+                        if(createBookingController.createBooking(registerBooking, user)){
+                            System.out.println("Succesfully registered to: " + registerBooking.toString());
+                        }
+                        else System.out.println("Balance is too low " + registerBooking.getName());
+                    case 4:
+                        break;
 
                 }
             } catch (InputMismatchException e) {
